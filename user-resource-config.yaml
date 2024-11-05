@@ -1,16 +1,13 @@
 apiVersion: delivery.ocm.software/v1alpha1
-kind: LocalizationConfig
+kind: ResourceConfig
 metadata:
-  name: resource-sample-localization
+  name: resource-configuration
 spec:
   rules:
   - yamlsubst:
       source:
-        resource: 
-          name: image
+        value: "nginx:latest"
       target:
         file:
           path: values.yaml
           value: image.repository
-      transformation:
-        type: Repository

@@ -11,6 +11,11 @@ components:
       input:
         type: helm
         path: ./podinfo
+    - name: kustomization
+      type: kustomization
+      input:
+        type: dir
+        path: ./podinfo-kustomization
     - name: mychart-localization
       type: ocm.localization
       input:
